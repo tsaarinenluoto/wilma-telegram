@@ -1,0 +1,12 @@
+[Unit]
+Description=Wilma to Telegram message forwarder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@PROJECT_DIR@
+ExecStart=@PROJECT_DIR@/venv/bin/python main.py
+
+[Install]
+WantedBy=default.target
